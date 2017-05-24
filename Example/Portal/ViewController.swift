@@ -1,24 +1,27 @@
-//
-//  ViewController.swift
-//  Portal
-//
-//  Created by Gustavo Barbosa on 05/24/2017.
-//  Copyright (c) 2017 Gustavo Barbosa. All rights reserved.
-//
-
 import UIKit
+import Portal
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, PortalViewControllerDelegate {
+
+    let dispatcher = Dispatcher()
+
+    @IBOutlet weak var currentEnvLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        currentEnvLabel.text = dispatcher.currentEnvironment?.name
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func selectEnvButtonTapped(_ sender: Any) {
+        let envs: [MyAPIEnvironment] = [.local, .staging, .production]
+        let portalViewController = PortalViewController(environments: envs,
+                                                     dispatcher: dispatcher)
+        portalViewController.delegate = self
+        navigationController?.pushViewController(portalViewController, animated: true)
     }
 
+    func portalDidSelect(environment: Environment) {
+        currentEnvLabel.text = dispatcher.currentEnvironment?.name
+        navigationController?.popViewController(animated: true)
+    }
 }
-

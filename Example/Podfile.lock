@@ -1,0 +1,16 @@
+PODS:
+  - Portal (0.1.0)
+
+DEPENDENCIES:
+  - Portal (from `../`)
+
+EXTERNAL SOURCES:
+  Portal:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Portal: fc87745d9cf340930aa989e0c60b2ff66aa25f80
+
+PODFILE CHECKSUM: 75b033bb5ca1ff0f81c8b4832fac0976f7d933d5
+
+COCOAPODS: 1.2.0

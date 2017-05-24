@@ -1,0 +1,22 @@
+{
+  "name": "Portal",
+  "version": "0.1.0",
+  "summary": "A short description of Portal.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Gustavo Barbosa/Portal",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Gustavo Barbosa": "gustavocsb@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Gustavo Barbosa/Portal.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Portal/Classes/**/*"
+}
