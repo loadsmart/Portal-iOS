@@ -3,7 +3,7 @@ import Portal
 
 class ViewController: UIViewController, PortalViewControllerDelegate {
 
-    let dispatcher = Dispatcher()
+    let dispatcher = EnvironmentDispatcher()
 
     @IBOutlet weak var currentEnvLabel: UILabel!
 

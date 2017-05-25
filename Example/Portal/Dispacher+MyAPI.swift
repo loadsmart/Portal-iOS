@@ -1,7 +1,7 @@
 import Foundation
 import Portal
 
-extension Dispatcher {
+extension EnvironmentDispatcher {
     var currentEnvironment: MyAPIEnvironment? {
         guard let identifier = currentEnvironmentIdentifier else {
             return nil

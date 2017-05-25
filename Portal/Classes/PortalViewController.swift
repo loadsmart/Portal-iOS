@@ -2,13 +2,13 @@ import UIKit
 
 public final class PortalViewController: UITableViewController {
 
-    public let dispatcher: Dispatcher
+    public let dispatcher: EnvironmentDispatcher
     public let environments: [Environment]
 
     public weak var delegate: PortalViewControllerDelegate?
 
     public init(environments: [Environment],
-                dispatcher: Dispatcher = Dispatcher()) {
+                dispatcher: EnvironmentDispatcher = EnvironmentDispatcher()) {
         self.environments = environments
         self.dispatcher = dispatcher
         super.init(style: .grouped)
