@@ -16,7 +16,7 @@
 		8605A5160B03E7EF6B35AC4ABB181656 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		B1DCE81B0AB8DA8D5E4CE1B83D2E44C0 /* Pods-Portal_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C85551003AAAFA757B6A3D48F9F6BC /* Pods-Portal_Example-dummy.m */; };
 		D7A49C0202D0306489E984E79A3A2F24 /* Pods-Portal_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2981D2E3EB784346441FD6EE2438C7 /* Pods-Portal_Tests-dummy.m */; };
-		E4AD26D59F7F763DA233FBBBC469426A /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D205C750E1DB21945F0F91469350A01F /* Dispatcher.swift */; };
+		E4AD26D59F7F763DA233FBBBC469426A /* EnvironmentDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D205C750E1DB21945F0F91469350A01F /* EnvironmentDispatcher.swift */; };
 		FC9E65429C4D8DEC8ABE4764CC01D413 /* Portal-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F6D912CACF63E5A566844384A85B7D7 /* Portal-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FFB1931A37A1B8CA94671C0EFF8C7AEF /* Pods-Portal_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BED406D6DD33409B9A638BF89C573869 /* Pods-Portal_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -32,12 +32,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		138790B0E70CE4A9182B4B7AB49757AD /* Pods-Portal_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Portal_Example.modulemap"; sourceTree = "<group>"; };
+		138790B0E70CE4A9182B4B7AB49757AD /* Pods-Portal_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Portal_Example.modulemap"; sourceTree = "<group>"; };
 		15C85551003AAAFA757B6A3D48F9F6BC /* Pods-Portal_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Portal_Example-dummy.m"; sourceTree = "<group>"; };
-		1835B5233292D311A4E5D4969DC24D9F /* Pods_Portal_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Portal_Example.framework; path = "Pods-Portal_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1835B5233292D311A4E5D4969DC24D9F /* Pods_Portal_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Portal_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E2981D2E3EB784346441FD6EE2438C7 /* Pods-Portal_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Portal_Tests-dummy.m"; sourceTree = "<group>"; };
-		3652753522EE600541C236C29F719C3F /* Pods_Portal_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Portal_Tests.framework; path = "Pods-Portal_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		41ABCF8AD000155A6FFE6FD33B8C3906 /* Portal.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Portal.modulemap; sourceTree = "<group>"; };
+		3652753522EE600541C236C29F719C3F /* Pods_Portal_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Portal_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41ABCF8AD000155A6FFE6FD33B8C3906 /* Portal.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Portal.modulemap; sourceTree = "<group>"; };
 		557858DED8997DB8D1D51D5E1AF0B34F /* Pods-Portal_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Portal_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		58980EDAC9B1048A460AC29611B4FBD1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6114F0A7D8968EF944153FEC5DB1A773 /* Pods-Portal_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Portal_Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -48,24 +48,24 @@
 		7F4ACF6BC777E3BD7BF2113534CC941B /* Portal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Portal.xcconfig; sourceTree = "<group>"; };
 		7F6D912CACF63E5A566844384A85B7D7 /* Portal-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Portal-umbrella.h"; sourceTree = "<group>"; };
 		8EA4C1D529F6580A4BE3FD2926C461C2 /* Pods-Portal_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Portal_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9B34D5F8570826BE8F7FE6B14547FBCA /* Pods-Portal_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Portal_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		ABC9C4DD667615EAF503CEE56CA7AAD9 /* Pods-Portal_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Portal_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B5BD8000B968CBEC6FC6FC57AA27E3F2 /* Pods-Portal_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Portal_Example-resources.sh"; sourceTree = "<group>"; };
-		B71B83349CBF157386B0EDDEB838F544 /* Portal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Portal.framework; path = Portal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B71B83349CBF157386B0EDDEB838F544 /* Portal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Portal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBAAF9149DD0059D745EB16BD22FA4CF /* Portal-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Portal-prefix.pch"; sourceTree = "<group>"; };
 		BED406D6DD33409B9A638BF89C573869 /* Pods-Portal_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Portal_Example-umbrella.h"; sourceTree = "<group>"; };
 		C17E472071898596A6EBF097C252DCE3 /* Pods-Portal_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Portal_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CBF70854BA7FAF5AB28FE02ACA9FB534 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D03C9626C077C30E56769E6865785C1F /* Pods-Portal_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Portal_Tests-resources.sh"; sourceTree = "<group>"; };
-		D205C750E1DB21945F0F91469350A01F /* Dispatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
+		D205C750E1DB21945F0F91469350A01F /* EnvironmentDispatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnvironmentDispatcher.swift; sourceTree = "<group>"; };
 		D2D96FEF5778BAD2DC9E6CB3AF7BB45A /* PortalViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PortalViewController.swift; sourceTree = "<group>"; };
 		DF20118770C128CABB0248C9A48776B8 /* Pods-Portal_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Portal_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DF2FF517AA2591E5A24CF83FC30A9D21 /* Portal-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Portal-dummy.m"; sourceTree = "<group>"; };
 		EED3FACC0FBEBAA0E04849ABA0002215 /* Pods-Portal_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Portal_Example-frameworks.sh"; sourceTree = "<group>"; };
 		F21450DA0254AC96BB11D03DF21AF792 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F44935990BC5C96946304A39FDCE4CF4 /* Pods-Portal_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Portal_Tests.modulemap"; sourceTree = "<group>"; };
+		F44935990BC5C96946304A39FDCE4CF4 /* Pods-Portal_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Portal_Tests.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +120,6 @@
 			children = (
 				A01479605F997F90AE5A2B65DE72BE1B /* Classes */,
 			);
-			name = Portal;
 			path = Portal;
 			sourceTree = "<group>";
 		};
@@ -200,11 +199,10 @@
 		A01479605F997F90AE5A2B65DE72BE1B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D205C750E1DB21945F0F91469350A01F /* Dispatcher.swift */,
 				65AE353E534DFB3A1A0B75A9555965AF /* Environment.swift */,
+				D205C750E1DB21945F0F91469350A01F /* EnvironmentDispatcher.swift */,
 				D2D96FEF5778BAD2DC9E6CB3AF7BB45A /* PortalViewController.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -353,7 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4AD26D59F7F763DA233FBBBC469426A /* Dispatcher.swift in Sources */,
+				E4AD26D59F7F763DA233FBBBC469426A /* EnvironmentDispatcher.swift in Sources */,
 				1E1DEE8F93D21816F5DCA572BAB6EAC6 /* Environment.swift in Sources */,
 				04E204A7DBA00DE3D256C07A7A0F2680 /* Portal-dummy.m in Sources */,
 				10AAC5DC270A0D882739780A3E8FFC81 /* PortalViewController.swift in Sources */,
