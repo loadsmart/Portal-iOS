@@ -45,6 +45,11 @@ public final class PortalViewController: UITableViewController {
     private func configure(cell: UITableViewCell, indexPath: IndexPath) {
         cell.textLabel?.text = environments[indexPath.row].name
         cell.detailTextLabel?.text = environments[indexPath.row].url.absoluteString
+        if (self.dispatcher.currentEnvironmentIdentifier == cell.textLabel?.text?.lowercased()) {
+            cell.detailTextLabel?.textColor = UIColor.white
+            cell.textLabel?.textColor = UIColor.white
+            cell.backgroundColor = UIColor.gray
+        }
     }
 
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
