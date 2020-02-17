@@ -34,17 +34,21 @@ public final class PortalViewController: UITableViewController {
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Environment") else {
             let defaultCell = UITableViewCell(style: .value1, reuseIdentifier: "Environment")
-            configure(cell: defaultCell, indexPath: indexPath)
+            if (configure(cell: defaultCell, indexPath: indexPath)) {
+                tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
+            }
             return defaultCell
         }
-
-        configure(cell: cell, indexPath: indexPath)
+        if (configure(cell: cell, indexPath: indexPath)) {
+            tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
+        }
         return cell
     }
 
-    private func configure(cell: UITableViewCell, indexPath: IndexPath) {
+    private func configure(cell: UITableViewCell, indexPath: IndexPath) -> Bool {
         cell.textLabel?.text = environments[indexPath.row].name
         cell.detailTextLabel?.text = environments[indexPath.row].url.absoluteString
+        return self.dispatcher.currentEnvironmentIdentifier == cell.textLabel?.text?.lowercased()
     }
 
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
